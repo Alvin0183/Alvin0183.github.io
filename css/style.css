@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,900&display=swap');
+*{
+    font-family: 'Poppins',cursive;
+}
+body {
+    background: linear-gradient(135deg, #000303, #010d11); /* Gradiente entre morado y azul oscuro */
+    color: #fff; /* Asegura que el texto sea legible */
+    margin: 0;
+    font-family: Arial, sans-serif;
+    width: 100%;
+    height: 82vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* padding-top: -30; */
+}
+
+/* From Uiverse.io by mrhyddenn */
+.botones {
+  position: relative;
+  padding: 10px 20px;
+  border-radius: 7px;
+  border: 1px solid rgb(61, 106, 255);
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  background: transparent; /* Fondo transparente */
+  color: #fff;
+  overflow: hidden;
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.botones:hover {
+  background: rgba(61, 106, 255, 0.5); /* Fondo semi-transparente al pasar el ratón */
+  box-shadow: 0 0 30px 5px rgba(0, 142, 236, 0.815);
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.botones:hover::before {
+  -webkit-animation: sh02 0.5s 0s linear;
+  -moz-animation: sh02 0.5s 0s linear;
+  animation: sh02 0.5s 0s linear;
+}
+
+.botones::before {
+  content: '';
+  display: block;
+  width: 0px;
+  height: 86%;
+  position: absolute;
+  top: 7%;
+  left: 0%;
+  opacity: 0;
+  background: #fff;
+  box-shadow: 0 0 50px 30px #fff;
+  -webkit-transform: skewX(-20deg);
+  -moz-transform: skewX(-20deg);
+  -ms-transform: skewX(-20deg);
+  -o-transform: skewX(-20deg);
+  transform: skewX(-20deg);
+}
+
+@keyframes sh02 {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+
+.botones:active {
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: box-shadow 0.2s ease-in;
+  -moz-transition: box-shadow 0.2s ease-in;
+  transition: box-shadow 0.2s ease-in;
+}
+
+/* Elimina el estilo del enlace dentro del botón */
+.botones a {
+  background-color: transparent; /* Fondo transparente */
+  padding: 0; /* Elimina el padding */
+  border-radius: 0; /* Elimina el borde redondeado */
+  color: inherit; /* Hereda el color del botón */
+  text-decoration: none; /* Elimina la subrayado */
+}
+
+.greetings{
+    font-size: 7rem;
+    font-weight: 900;
+}
+.greetings > span{
+    animation: glow 2.5s ease-in-out infinite;
+}
+@keyframes glow{
+    0%, 100%{
+        color: #fff;
+        text-shadow: 0 0 12px #39c6d6, 0 0 50px #39c6d6, 0 0 100px #39c6d6;
+    }
+    10%, 90%{
+        color: #111;
+        text-shadow: none;
+    }
+}
+.greetings > span:nth-child(2){
+    animation-delay: .2s ;
+}
+.greetings > span:nth-child(3){
+    animation-delay: .4s ;
+}
+.greetings > span:nth-child(4){
+    animation-delay: .6s;
+}
+.greetings > span:nth-child(5){
+    animation-delay: .8s;
+}
+.greetings > span:nth-child(6){
+    animation-delay: 1s;
+}
+
+.description{
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.button a{
+    text-decoration: none;
+    font-size: 1rem;
+    color: #111;
+}
+
+@media screen and (max-width:574px){
+    .greetings{
+        display: block;
+        font-size: 4rem;
+        font-weight: 800;
+        text-align: center;
+    }
+    .description{
+        font-size: 2rem;
+    }
+    
+    .button a{
+        font-size: 1rem;
+    }
+}
+
